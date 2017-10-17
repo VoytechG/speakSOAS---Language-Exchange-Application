@@ -24,4 +24,4 @@ Displays a list of all users with whom a chat has been started.
 ### Chat
 Automatically scrolls down the message list upon entering the page, allows for sending text messages and images.
 
- 
+![Screenshots](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ScrennshotCollage.png "Screenshot Collage")
