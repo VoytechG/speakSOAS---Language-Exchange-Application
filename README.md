@@ -1,7 +1,11 @@
 # speakSOAS - Language Exchange App
 Cross platform mobile application with user account system, user searcher based on users’ languages to-learn and to-teach choices, and built-in text chat with picture sending.
 
-Technologies: Ionic Cordova (TypeScript, AngularJS, HTML & CSS) and Google Firebase Authentication and Real Time Database; deployed for Android and iOS
+Application developed for SOAS, University of London by Wojciech Golaszewski and Federico Vignati. It's purpose is to encourage contacts between SOAS students and staff, thus integrating SOAS community even more and giving oppurtunities for SOASians to practice speaking languages they desire to learn.
+
+**Technologies**: 
+ - Ionic 3, Cordova (TypeScript, AngularJS, HTML & CSS); deployed for Android and iOS
+ - Google Firebase (Authentication and Real Time Database)
 
 ![App Promotion Poster](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/Poster.PNG "App Promotion Poster")
 
