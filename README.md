@@ -30,6 +30,29 @@ Automatically scrolls down the message list upon entering the page, allows for s
 
 ![Screenshots](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ScrennshotCollage.png "Screenshot Collage")
 
+## Deployment
+1. Download and install [Node.js](https://nodejs.org/en/download/)
+2. Follow [this guide](https://ionicframework.com/getting-started/) to initialise a blank Ionic app
+3. Download this repository and copy all the files to your newly created app (replace duplicates)
+4. Open node.js cli in your app's directory
+5. Run npm install
+6. Run ionic cordova platform add android 
+or add ios if you are on Mac
+7. Install (manually, from the terminal) all the missing plugins from this list (plugins folder):
+ - cordova-plugin-camera
+ - cordova-plugin-compat
+ - cordova-plugin-console
+ - cordova-plugin-device
+ - cordova-plugin-fcm
+ - cordova-plugin-splashscreen
+ - cordova-plugin-statusbar
+ - cordova-plugin-whitelist
+ - cordova-plugin-x-toast
+ - cordova-sqlite-storage
+ - ionic-plugin-deploy
+ - ionic-plugin-keyboard
+ 8. You are ready to go!
+ 
 
 ## Licences 
 **The application's code is fully commented. You can feel free to use it, however it is requested to remove any SOAS associations (pictures, names etc).**
