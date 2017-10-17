@@ -1,7 +1,7 @@
 # speakSOAS - Language Exchange App
-Cross platform mobile application with user account system, user searcher based on users’ languages to-learn and to-teach choices, and built-in text chat with picture sending.
+Cross platform mobile social and communicator application, With user account system, user searcher based on users’ languages to-learn and to-teach choices and text chat with picture sending.
 
-Application developed for SOAS, University of London by Wojciech Golaszewski and Federico Vignati. It's purpose is to encourage contacts between SOAS students and staff, thus integrating SOAS community even more and giving oppurtunities for SOASians to practice speaking languages they desire to learn.
+Application has been developed for SOAS, University of London by Wojciech Golaszewski and Federico Vignati. It's purpose is to encourage contacts between SOAS students and staff, thus integrating SOAS community even more and giving oppurtunities for SOASians to practice speaking languages they desire to learn.
 
 **Technologies**: 
  - Ionic 3, Cordova (TypeScript, AngularJS, HTML & CSS); deployed for Android and iOS
@@ -29,3 +29,7 @@ Displays a list of all users with whom a chat has been started.
 Automatically scrolls down the message list upon entering the page, allows for sending text messages and images.
 
 ![Screenshots](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ScrennshotCollage.png "Screenshot Collage")
+
+
+## Licences 
+**The application's code is fully commented. You can feel free to use it, however it is requested to remove any SOAS associations (pictures, names etc).**
