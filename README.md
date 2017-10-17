@@ -16,7 +16,7 @@ User chooses a language they desire to learn (up right corner) and the app displ
  - **Cross matches (stars)** - if user A wants to learn a language user B knows, and user B want to learn a language user A knows, both users can help each other with their language skills. Such a double match is denoted with a star.
  - **Chat and Profile Access** - clicking on profile picture opens user profile, clicking anywhere else on the user bar opens chat.
  
- ![User Searcher Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios1.PNG "User Searcher Page")
+
  
 ### Chat List
 Displays a list of all users with whom a chat has been started.
@@ -27,4 +27,8 @@ Displays a list of all users with whom a chat has been started.
   
 ### Chat
 Automatically scrolls down the message list upon entering the page, allows for sending text messages and images.
+![User Searcher Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios1.PNG "User Searcher Page")
 ![Chat Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios2.PNG "Chat Page")
+![Chat List Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios3.PNG "Chat List Page")
+  
+ 
