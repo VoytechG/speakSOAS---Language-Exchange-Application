@@ -3,6 +3,8 @@ Cross platform mobile application with user account system, user searcher based 
 
 Technologies: Ionic Cordova (TypeScript, AngularJS, HTML & CSS) and Google Firebase Authentication and Real Time Database; deployed for Android and iOS
 
+![App Promotion Poster](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/Poster.PNG "App Promotion Poster")
+
 ## Features 
 ### Account System (with Google Firebase authentication)
  - **Sign up with personal email address** (with sign-up validation email)
@@ -14,10 +16,15 @@ User chooses a language they desire to learn (up right corner) and the app displ
  - **Cross matches (stars)** - if user A wants to learn a language user B knows, and user B want to learn a language user A knows, both users can help each other with their language skills. Such a double match is denoted with a star.
  - **Chat and Profile Access** - clicking on profile picture opens user profile, clicking anywhere else on the user bar opens chat.
  
+ ![User Searcher Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios1.PNG "User Searcher Page")
+ 
 ### Chat List
 Displays a list of all users with whom a chat has been started.
  - **New Message** - the inscription 'NEW' denotes a new unread message. Messages are marked as read when the user enters the chat.
  - **Chat and Profile Access** - clicking on profile picture opens user profile, clicking anywhere else on the user bar opens chat.
+ 
+![Chat List Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios3.PNG "Chat List Page")
   
 ### Chat
 Automatically scrolls down the message list upon entering the page, allows for sending text messages and images.
+![Chat Page](https://github.com/VoytechG/speakSOAS---Language-Exchange-Application/blob/master/Screenshots/ios2.PNG "Chat Page")
