@@ -1,0 +1,51 @@
+<!-- 
+    Code citation: https://github.com/javebratt/ionic-firebase-email-auth/blob/master/src/pages/login/login.html
+    Please note that some minor graphic changes have been applied.
+ -->
+ 
+<ion-header>
+  <ion-navbar color =  "primary">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class = "login" scroll = "false">
+  <!-- Image source: https://www.sconul.ac.uk/sites/default/files/images/new-logo-min-size-full-colour.png -->
+  <img src = "assets/images/SOAS.png">
+
+  <form [formGroup] = "loginForm" (submit) = "loginUser()" novalidate>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email formControlName = "email" type = "email" (change) = "elementChanged(email)"
+        placeholder = "Your email address"
+        [class.invalid] = "!loginForm.controls.email.valid && (emailChanged || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item class = "error-message" *ngIf = "!loginForm.controls.email.valid  && (emailChanged || submitAttempt)">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+
+    <ion-item class = "password">
+      <ion-label stacked>Password</ion-label>
+      <ion-input #password formControlName = "password" type = "password" (change) = "elementChanged(password)"
+        placeholder = "Your password"
+        [class.invalid] = "!loginForm.controls.password.valid && (passwordChanged || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item class = "error-message" *ngIf = "!loginForm.controls.password.valid  && (passwordChanged || submitAttempt)">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <button ion-button block type = "submit" color = "primary">
+      Login
+    </button>
+  </form>
+
+  <button ion-button block clear (click) = "changePage(signupPage)" color = "primary">
+    Create a new account
+  </button>
+
+  <button ion-button block clear (click) = "changePage(resetPasswordPage)" color = "primary">
+    I forgot my password
+  </button>
+</ion-content>

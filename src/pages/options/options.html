@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>Options</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scroll = "false">
+  <ion-list>
+    <ion-item>
+      <a href = "mailto:name@email.com" style = "text-decoration: none; color: #000;">
+     User Issue Report
+      </a>
+     </ion-item>
+
+    <ion-item>
+      <a href = "mailto:name@email.com" style = "text-decoration: none; color: #000;"> Bug (App Issue) Report
+      </a>
+    </ion-item>
+
+    <ion-item>
+      <div (click) = "changePage(privacyPolicyPage)">Privacy Policy</div>
+    </ion-item>
+
+    <ion-item>
+      <div (click) = "changePage(termsServicePage)">Terms of Service</div>
+    </ion-item>
+
+    <ion-item>
+      <div (click) = "changePage(licensesPage)">Licenses</div>
+    </ion-item>
+  </ion-list>         
+</ion-content>

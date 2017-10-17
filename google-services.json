@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "58372507116",
+    "firebase_url": "https://soas-lea-testing.firebaseio.com",
+    "project_id": "soas-lea-testing",
+    "storage_bucket": "soas-lea-testing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58372507116:android:e93c051542aaee80",
+        "android_client_info": {
+          "package_name": "com.soas.LEA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58372507116-nhuuedebi0puvdc3tgofv9pd6evn2oee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0N2ldQR1qLaekjC2LZvtQvQoVYbBHWm4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

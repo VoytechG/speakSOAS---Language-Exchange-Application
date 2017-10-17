@@ -1,0 +1,8 @@
+{
+  "name": "SOAS Language Exchange",
+  "app_id": "b0006dc0",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

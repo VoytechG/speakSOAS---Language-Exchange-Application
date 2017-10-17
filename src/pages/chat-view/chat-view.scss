@@ -1,0 +1,30 @@
+/** 
+ * Code citation: https://github.com/ionic2blueprints/firebase-chat/blob/master/src/pages/chat-view/chat-view.scss
+ * Please note that some minor graphic changes have been applied.
+ */
+ 
+.chat-view {
+  .messages {
+    width: 97%;
+    position: absolute;
+
+    .message {
+      width: 70%;
+      padding: 5px 10px;
+      background: color($colors, primary, base);;
+      color: #fff;
+      border-radius: 5px;
+      margin: 5px;
+      float: left;
+    }
+    
+    .message.me {
+      float: right;
+      background: #fff;
+      border: 1px solid color($colors, primary, base);;
+      color: #222;
+      text-align: right;
+      margin-right: 5%;
+    }
+  }
+}

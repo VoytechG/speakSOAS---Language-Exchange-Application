@@ -1,0 +1,45 @@
+/** 
+ * Code citation: https://github.com/javebratt/ionic-firebase-email-auth/blob/master/src/pages/signup/signup.scss 
+ * Please note that some minor graphic changes have been applied.
+ */
+page-signup {
+  form {
+    margin-bottom: 32px;
+    button {
+      margin-top: 20px;
+    }
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #d2d2d2;
+  }
+
+  ion-label {
+      margin-left: 5px;
+  }
+
+  ion-input {
+    padding: 5px;
+  }
+
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+
+  .thirdLanguage {
+    margin-bottom: 35px !important;
+  }
+
+  .gender {
+    margin-bottom: 35px !important;
+  }
+
+  .password {
+    margin-bottom: 35px !important;
+  }
+}

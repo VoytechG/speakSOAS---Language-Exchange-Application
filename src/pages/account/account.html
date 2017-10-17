@@ -1,0 +1,85 @@
+<!--
+    Code citation: http://codepen.io/colinkeany/pen/XJOvXz
+    Please note that the file above has only been used as a starting template.
+    Some major graphic changes have been applied.
+ -->
+
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>My profile</ion-title>
+        <ion-buttons right>
+          <button ion-button item-right (click)="goToOptions()">
+            <ion-icon name="settings"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons left>
+            <ion-spinner color="light" *ngIf="!(user.username)"></ion-spinner>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="avatar">
+      <img *ngIf="!user.picture" src="assets/images/default.jpg" height="150" width="150"/>
+      <img *ngIf="user.picture" src="{{user.picture}}" height="150" width="150"/>
+    </div>
+
+    <div class="wrapper">
+      <button ion-button color="white" icon-left class = "editButton" (click)="updatePicture()">
+        <ion-icon name='camera'></ion-icon>
+        Edit
+        </button>
+    </div>
+
+    <h2>{{user.username}}</h2>
+
+    <p class = "gender" *ngIf="user.gender == 'Prefer not to say'">Gender: Prefer not to say</p>
+    <p class = "gender" *ngIf="user.gender != 'Prefer not to say'">{{user.gender}}
+      <span class="end">
+        <ion-icon *ngIf="user.gender == 'Male'" name="male"></ion-icon>
+        <ion-icon *ngIf="user.gender == 'Female'" name="female"></ion-icon>
+      </span>
+    </p>
+
+    <p class = "customStyle">{{user.position}}</p>
+
+    <h4>{{user.email}}</h4>
+
+
+    <ion-item no-lines>
+        <ion-textarea class = "biographyCard" maxlength = "150" id = "input" (input)="autoHeight()" (click)= "autoHeight()" [(ngModel)]="biography" value="{{user.biography}}"></ion-textarea>
+    </ion-item>
+    <p style = "font-size: 14px;">Maximum 150 characters<p>
+    <button ion-button color = "primary" class = "submitButton" (click)="updateBiography()">
+        Update your biography
+    </button>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class = "customCard">
+            <p class = "customStyle">I want to chat in</p>
+            <p class = "languageParagraph">{{user.language1}}</p>
+            <p class = "languageParagraph">{{user.language2}}</p>
+            <p class = "languageParagraph">{{user.language3}}</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class = "customCard">
+            <p class = "customStyle">I can chat in</p>
+            <p class = "languageParagraph" *ngIf="languagecross1 != 'Null'">{{user.languagecross1}}</p>
+            <p class = "languageParagraph" *ngIf="languagecross2 != 'Null'">{{user.languagecross2}}</p>
+            <p class = "languageParagraph" *ngIf="languagecross3 != 'Null'">{{user.languagecross3}}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div class = "container">
+      <button ion-button class = "logoutButton" color = "primary" (click)="logout()">
+        Logout
+      </button>
+    </div>
+</ion-content>

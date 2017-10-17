@@ -1,0 +1,58 @@
+<!-- 
+    Code citation: http://codepen.io/colinkeany/pen/XJOvXz
+    Please note that the file above has only been used as a starting template.
+    Some major graphic changes have been applied.
+ -->
+
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>{{username}}</ion-title>
+      <ion-buttons right>
+        <button ion-button item-right (click)="closeModal()"><ion-icon name = "arrow-back"></ion-icon></button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <div>
+      <div class = "avatar">
+        <img *ngIf = "!picture" src="assets/images/default.jpg" height="150" width="150"/>
+        <img *ngIf = "picture" src="{{picture}}" height="150" width="150"/>   
+      </div>             
+            
+      <h2>{{username}}</h2>
+      <p class = "gender" *ngIf="gender == 'Prefer not to say'">Gender: Prefer not to say</p>
+      <p class = "gender" *ngIf="gender != 'Prefer not to say'">{{gender}}
+          <span class="end">
+              <ion-icon *ngIf="gender == 'Male'" name="male"></ion-icon>
+              <ion-icon *ngIf="gender == 'Female'" name="female"></ion-icon>
+          </span>
+      </p>
+
+      <p class = "customStyle">{{position}}</p>
+      <p class = "biography">{{biography}}</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card class = "customCard">
+              <p class = "customStyle">I want to chat in</p> 
+              <p class = "languageParagraph">{{language1}}</p>
+              <p class = "languageParagraph">{{language2}}</p>
+              <p class = "languageParagraph">{{language3}}</p>
+            </ion-card>
+          </ion-col>
+          
+          <ion-col>
+            <ion-card class = "customCard">
+              <p class = "customStyle">I can chat in</p>
+              <p class = "languageParagraph" *ngIf = "languagecross1 != 'Null'">{{languagecross1}}</p>
+              <p class = "languageParagraph" *ngIf = "languagecross2 != 'Null'">{{languagecross2}}</p>
+              <p class = "languageParagraph" *ngIf = "languagecross3 != 'Null'">{{languagecross3}}</p>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>

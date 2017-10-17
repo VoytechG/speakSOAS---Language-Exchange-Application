@@ -1,0 +1,27 @@
+<!--
+    Code citation: https://github.com/ionic2blueprints/firebase-chat/blob/master/src/pages/chats/chats.html
+    Please note that some minor graphic changes have been applied.
+-->
+<ion-header>
+    <ion-navbar color = "primary">
+        <ion-title>Chats</ion-title>
+        <ion-buttons end>
+            <ion-spinner color = "light" *ngIf = "!(chats | async)"></ion-spinner>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+     <a ion-item *ngFor = "let chat of chats | async" (click) = "openChat(chat.$key)">
+        <ion-avatar item-left (click)="openDetail(chat.$key)">
+                <img *ngIf = "!(chat.info | async).picture" src = "assets/images/default.jpg">
+                <img *ngIf = "(chat.info | async).picture" src = "{{(chat.info | async).picture}}">
+        </ion-avatar>
+        <span>{{(chat.info | async).username}}</span>
+        <span *ngIf = "!chat.info.seen" item-right class="new">NEW</span>
+
+        <button ion-button item-right color = "white" [clear] = "true">
+            <ion-icon color = "primary" name = "chatboxes" style = "font-size: 25px;"></ion-icon>
+        </button>
+     </a>
+</ion-content>

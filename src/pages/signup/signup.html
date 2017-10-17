@@ -1,0 +1,116 @@
+<!-- 
+    Code citation: https://github.com/javebratt/ionic-firebase-email-auth/blob/master/src/pages/signup/signup.html
+    Please note that the file has been modified in order to introduce extra fields such as the languages
+    (the list of languages is automatically downloaded from Firebase Database), the username 
+    and the gender.
+ -->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Create an Account
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="signup">
+  <!-- Image source: https://www.sconul.ac.uk/sites/default/files/images/new-logo-min-size-full-colour.png -->
+  <img src = "assets/images/SOAS.png">
+
+  <form [formGroup]="usernameForm">
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input #username formControlName="username" type="text" (change)="elementChanged(username)"
+        placeholder="Your username"
+        [class.invalid]="!usernameForm.controls.username.valid && (usernameChanged || submitAttempt)">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!usernameForm.controls.username.valid  && (usernameChanged || submitAttempt)">
+      <p>Your username needs more than 5 characters.</p>
+    </ion-item>
+  </form>
+  
+  <ion-item class = "gender">
+    <ion-label stacked>Gender</ion-label>
+    <ion-select required [(ngModel)]="gender">
+      <ion-option value="Male">Male</ion-option>
+      <ion-option value="Female">Female</ion-option>
+      <ion-option value="Prefer not to say">Prefer not to say</ion-option>
+    </ion-select>
+   </ion-item>
+
+  <ion-item>
+    <ion-label stacked>I want to chat in</ion-label>
+    <ion-select required [(ngModel)]="language1">
+        <ion-option value="Null">Null</ion-option>
+        <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked></ion-label>
+    <ion-select required [(ngModel)]="language2">
+        <ion-option value="Null">Null</ion-option>
+        <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class = "thirdLanguage">
+    <ion-label stacked></ion-label>
+    <ion-select required [(ngModel)]="language3">
+        <ion-option value="Null">Null</ion-option>
+        <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>I can chat in</ion-label>
+    <ion-select required [(ngModel)]="languagecross1">
+        <ion-option value="Null">Null</ion-option>
+        <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked></ion-label>
+    <ion-select required [(ngModel)]="languagecross2">
+        <ion-option value="Null">Null</ion-option>
+        <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class = "thirdLanguage">
+    <ion-label stacked></ion-label>
+    <ion-select required [(ngModel)]="languagecross3">
+        <ion-option value="Null">Null</ion-option>
+        <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email formControlName="email" type="email" (change)="elementChanged(email)"
+        placeholder="Your email address"
+        [class.invalid]="!signupForm.controls.email.valid && (emailChanged || submitAttempt)">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.email.valid  && (emailChanged || submitAttempt)">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+
+    <ion-item class = "password">
+      <ion-label stacked>Password</ion-label>
+      <ion-input #password formControlName="password" type="password" (change)="elementChanged(password)"
+        placeholder="Your password"
+        [class.invalid]="!signupForm.controls.password.valid && (passwordChanged || submitAttempt)">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.password.valid  && (passwordChanged || submitAttempt)">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <button ion-button block type="submit">
+      Create an Account
+    </button>
+  </form>
+</ion-content>

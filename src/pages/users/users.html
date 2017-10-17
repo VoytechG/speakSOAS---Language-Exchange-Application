@@ -1,0 +1,42 @@
+<!--
+    Code citation: https://github.com/ionic2blueprints/firebase-chat/blob/master/src/pages/users/users.html
+    Please note that the file has been modified in order to introduce the language functionalities
+    and the new chat button.
+ -->
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Users</ion-title>
+        <ion-buttons end>
+            <ion-spinner color="light" *ngIf="!(users | async)"></ion-spinner>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-item color = "primary" class = "item-right">
+      <ion-label color = "dark">I want to chat in</ion-label>
+        <ion-select required [(ngModel)]="languageToLearn">
+          <ion-option *ngFor= "let language of languages | async" value="{{language.$key}}">{{language.$value}}</ion-option>
+        </ion-select>
+    </ion-item>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <span *ngFor="let user of users | async" [hidden] = "filter(user)">
+        <a ion-item (click)="openChat(user.$key)">
+            <ion-avatar item-left (click)="openDetail(user.$key)">
+                <img *ngIf="!user.picture" src="assets/images/default.jpg">
+                <img *ngIf="user.picture" src="{{user.picture}}">
+            </ion-avatar>
+
+            <h2>{{user.username}}
+                <span class="end">
+                    <ion-icon *ngIf="crossMatch(user)" name="star"></ion-icon>
+                </span>
+            </h2>
+
+            <button ion-button item-right color = "white" [clear] = "true">
+                <ion-icon color = "primary" name="chatboxes" style ="font-size: 25px;"></ion-icon>
+            </button>
+        </a>
+      </span>
+    </ion-list>
+</ion-content>
